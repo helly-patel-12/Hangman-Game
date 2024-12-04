@@ -1,0 +1,240 @@
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #f3d9dc, #9acdf1);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  text-shadow: 2px 2px #8fd3f4;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+/* General Button Styling */
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+#controls button {
+  background-color: #5cb85c; /* Green background */
+  color: #000000; /* White text */
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover Effects */
+#controls button:hover {
+  background-color: #333; 
+  color: #5cb85c;
+  transform: scale(1.1);
+}
+
+/* Active State */
+#controls button:active {
+  background-color: #3e8e41; /* Dark green */
+  transform: scale(0.95);
+}
+
+/* Timer Container */
+.timer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.time-bar {
+  width: 80%;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.time-bar-fill {
+  width: 100%;
+  height: 100%;
+  background-color: #4caf50; /* Green */
+  transition: width 1s linear;
+}
+
+/* Hangman Area */
+.game-area {
+  text-align: center;
+}
+
+#hangman-image {
+  width: 200px;
+  height: auto;
+}
+
+#hint-box {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.word-display {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.word-display li {
+  margin: 5px;
+  padding: 10px;
+  border-bottom: 2px solid #333;
+  font-size: 1.5rem;
+  width: 30px;
+  text-align: center;
+}
+
+#guesses-text {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Keyboard */
+.keyboard {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  gap: 5px;
+}
+
+.keyboard button {
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #5cb85c;
+  color: #000000;
+}
+
+.keyboard button:disabled {
+  background-color: darkgreen;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.keyboard button:hover {
+  background-color: #333;
+  color: #5cb85c;
+  transform: scale(1.1);
+}
+
+/* Modal for Results */
+.modal.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: linear-gradient(to bottom right, #f3d9dc, #9acdf1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#result-image {
+  width: 150px;
+  height: auto;
+}
+
+.play-again {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #5cb85c;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+}
+
+.play-again:hover {
+  background-color: #333;
+  color: #5cb85c;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    margin: 10px;
+  }
+
+  #controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #controls button {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .time-bar {
+    width: 90%;
+  }
+
+  #hangman-image {
+    width: 150px;
+  }
+
+  .word-display li {
+    font-size: 1.2rem;
+    width: 25px;
+  }
+
+  .keyboard {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 3px;
+  }
+
+  .keyboard button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+}

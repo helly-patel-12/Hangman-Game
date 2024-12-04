@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header section -->  
+    <h1>Hangman Game</h1>
+    
+    <div class="timer-container">
+      <div class="time-bar">
+        <div class="time-bar-fill"></div>
+      </div>
+    </div>
+    
+
+    <div class="game-area">
+      <div id="hangman-image-container">
+        <img id="hangman-image" src="images/hangman-0.svg" alt="Hangman">
+      </div>
+      <div id="hint-box">
+        <h2>Hint: <span id="hint-text"></span></h2>
+      </div>
+      <ul id="word-display" class="word-display"></ul>
+      <p id="guesses-text">Wrong Guesses: 0 / 6</p>
+    </div>
+
+    <div id="keyboard" class="keyboard"></div>
+    
+    <!-- Modal for results -->
+    <div id="game-modal" class="modal hidden">
+      <div class="modal-content">
+        <img id="result-image" src="" alt="Result Image">
+        <h2 id="modal-title"></h2>
+        <p id="modal-message"></p>
+        <button id="play-again" class="play-again">Play Again</button>
+      </div>
+    </div>
+
+    <div id="controls">
+      <button id="reset-btn">Reset</button>
+      <button id="pause-btn">Pause</button>
+      <button id="hint-btn">Hint</button>
+      <!--
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="difficult">Difficult</option>
+      </select>
+      -->
+    </div>
+    
+    <!-- Add audio elements 
+    <audio id="win-sound" src="audio/win.mp3"></audio>
+    <audio id="lose-sound" src="audio/lose.mp3"></audio>
+    <audio id="correct-sound" src="audio/correct.mp3"></audio>
+    <audio id="wrong-sound" src="audio/wrong.mp3"></audio>
+    <audio id="click-sound" src="audio/click.mp3"></audio>
+    <audio id="background-music" src="audio/background-music.mp3" loop></audio>  -->
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
