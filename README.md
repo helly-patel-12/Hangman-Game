@@ -21,7 +21,7 @@ Tablet View
 (https://github.com/user-attachments/assets/7d9f10cd-639f-427c-8e2d-401de027dd9b)
 
 Mobile View
-(https://github.com/user-attachments/assets/e1e9ab2f-0d49-4faf-b8b4-245e26515cbb)
+(https://github.com/user-attachments/assets/2d749e67-4d54-44a9-aa31-205e4426eaa5)
 
 
 🛠️ Technologies Used
